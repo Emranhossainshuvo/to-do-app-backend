@@ -6,4 +6,12 @@ const port = process.env.PORT || 5000;
 
 // middleware
 app.use(cors());
-app.use(express.json())
+app.use(express.json());
+
+app.get("/", (req, res) => {
+    res.send("Todo backend application is running")
+})
+
+app.listen(port, () => {
+    console.log(`To-do server is running on port ${port}`)
+})
